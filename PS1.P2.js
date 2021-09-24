@@ -1,29 +1,27 @@
 //Problem 2
-const evaluate = expression => {
-    const left = expression[0];
-    const operation = expression[1];
-    const right = expression[2];
+const evaluate = ([left, operation, right]) => {
     switch(operation) {
         case '+':
-            return (parseInt(left) + parseInt(right));
+            return (input) => Number(left) + Number(right);
             break;
         case '-':
-            return (parseInt(left) - parseInt(right));
+            return (input) => Number(left) - Number(right);
             break;
         case '*':
-            return (parseInt(left) * parseInt(right));
+            return (input) => Number(left) * Number(right);
             break;
         case '/':
-            return (parseInt(left) / parseInt(right));
+            return (input) => Number(left) / Number(right);
             break;
         case '^':
-            return (parseInt(left) ** parseInt(right));
+            return (input) => Number(left) ** Number(right);
             break;
     }
 }
-const eval = expression => {
+
+const eval = (expression) => {
     let operator = evaluate(expression);
-    console.log(`${expression} = ${operator}`);
+    console.log(operator(expression));
 }
 
 //Test eval()
