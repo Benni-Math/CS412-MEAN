@@ -14,6 +14,7 @@ router.route('/ps3')
         res.render('title', {'str': 'Hey now!'});
     })
     //Question c
+    //POST on Postman using Body and x-www-form-urlencoded, have Postman running locally and web version
     .post((req, res, next) => {
         res.render('title2',{'str': req.body.str, 'str_length': req.body.str.length});
     })
