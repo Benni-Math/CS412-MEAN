@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var usersRouter = require('./routes/users');
-var ps4Router = require('./routes/ps4')
+var ps5Router = require('./routes/ps5')
 
 var app = express();
 
@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //use ps4Router for '/' otherwise route will break to indexRouter for '/ps4'
-app.use('/', ps4Router);
+app.use('/', ps5Router);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
