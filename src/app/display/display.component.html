@@ -1,0 +1,18 @@
+<h2>ps6</h2>
+<div *ngIf="Display!=null">
+  Enter a query
+</div>
+
+<div *ngIf="Display">
+
+  <div *ngFor="let weather of queryData">
+    {weather | json}
+
+  </div>
+  <div>
+
+    {queryData}
+
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+<div>
+  <ul *ngFor="let weather of weatherlist">
+    <li (click)="setSelectedWeather(weather)">{{weather.city}}</li>
+  </ul>
+</div>
+
+
+<div *ngIf="selectedWeather!=null">
+  <input type="text" [(ngModel)]="selectedWeather.city">
+  <input type="text" [(ngModel)]="selectedWeather.degree">
+  <input type="text" [(ngModel)]="selectedWeather.date">
+</div>
